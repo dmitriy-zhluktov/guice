@@ -5,12 +5,10 @@ import com.arc.guice.service.RestService;
 import com.arc.request.Request;
 import com.arc.request.RequestType;
 import com.google.inject.Inject;
-import com.google.inject.Singleton;
 
 /**
  * Обработчик REST-запросов
  */
-@Singleton
 public class RestRequestHandler extends RequestHandler
 {
 	private RequestService service;

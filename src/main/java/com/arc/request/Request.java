@@ -7,13 +7,23 @@ import java.util.Objects;
  */
 public class Request
 {
-	private RequestType requestType;
-	private String requestBody;
+	private final RequestType requestType;
+	private final String requestBody;
 
 	public Request(RequestType requestType, String requestBody)
 	{
 		this.requestType = requestType;
 		this.requestBody = requestBody;
+	}
+
+	public RequestType getRequestType()
+	{
+		return requestType;
+	}
+
+	public String getRequestBody()
+	{
+		return requestBody;
 	}
 
 	@Override

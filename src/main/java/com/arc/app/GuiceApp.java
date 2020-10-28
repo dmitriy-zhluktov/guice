@@ -6,6 +6,12 @@ import com.arc.request.RequestType;
 public class GuiceApp
 {
 	public static void main(String[] args) {
-		Request request = new Request(RequestType.REST, "some text");
+		RequestTypeSpecifier requestTypeSpecifier = new RequestTypeSpecifier();
+
+		Request request = new Request(RequestType.REST, "some rest text");
+		requestTypeSpecifier.delegateRequest(request);
+
+		request = new Request(RequestType.MQ, "some mq text");
+		requestTypeSpecifier.delegateRequest(request);
 	}
 }
